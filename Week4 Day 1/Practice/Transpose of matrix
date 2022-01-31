@@ -1,0 +1,39 @@
+/* Example of 2D Array
+
+Transpose of matrix  
+
+Solution:      */
+
+#include<stdio.h>
+int main()
+{
+int m,n,c,d,matrix[10][10],transpose[10][10];         //Initialisation of 2D array
+printf("Enter the number of rows and colums of matrix\n");
+scanf("%d%d",&m,&n);                                            //taking number of rows and columns from user
+printf("Enter the elements of matrix\n");
+for(c=0;c<m;c++)
+{
+    for(d=0;d<n;d++)
+    {
+        scanf("%d",&matrix[c][d]);                   //taking matrix elements from user
+    }
+}
+for(c=0;c<m;c++)
+{
+    for(d=0;d<n;d++)
+    {
+        transpose[d][c]=matrix[c][d];    //converting rows into column and column into rows
+        }
+}
+printf("Transpose of entered matrix\n");
+for(c=0;c<n;c++)
+{
+    for(d=0;d<m;d++)
+    {
+        printf("%d\t",transpose[c][d]);       //printing the transposed matrix
+    }
+    printf("\n");                       
+}
+return 0;
+    }
+
