@@ -21,9 +21,9 @@ scanf("%d",&add);                    //Value of element to be added
 
 for(i=n;i>=pos;i--)                        
 {
- a[i+1]=a[i];                             //shifting elements to right side(example- n to n+1)
+ a[i+1]=a[i];                          //shifting elements to right side(example- n to n+1)
+ }
  a[pos]=add;                              //adding new element in a position we want
-}
 
 printf("\nResultant array is: ");
 for (i=0;i<=n;i++)
