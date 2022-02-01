@@ -5,7 +5,7 @@ int main()
 int a[100],pos,i,n,add;
 
 printf("\nEnter number of elements in array:");
-scanf("%d",&n);
+scanf("%d",&n);                               //size of array
 
 printf("\nEnter %d elements\n", n);
 for(i=0;i<n;i++)
@@ -14,21 +14,21 @@ scanf("%d",&a[i]);
 }
 
 printf("\nEnter the location where you want to insert new element:");
-scanf("%d",&pos);
+scanf("%d",&pos);                                 //location where we want to add new element
 
 printf("\nEnter the value to insert:");
-scanf("%d",&add);
+scanf("%d",&add);                    //Value of element to be added
 
-for(i=n-1;i>=pos-1;i--)
+for(i=n;i>=pos;i--)                        
 {
- a[i+1]=a[i];
- a[pos-1]=add;
+ a[i+1]=a[i];                             //shifting elements to right side(example- n to n+1)
+ a[pos]=add;                              //adding new element in a position we want
 }
 
 printf("\nResultant array is: ");
 for (i=0;i<=n;i++)
 {
-printf("%d\n",a[i]);
+printf("%d\n",a[i]);              //printing of array with new added element
 }
 return 0;
 }
