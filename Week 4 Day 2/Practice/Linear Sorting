@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main(){
+   
+   int i, j, count, temp, number[25];
+
+   printf("How many numbers you are going to enter? ");
+   scanf("%d",&count);
+
+   printf("Enter %d elements: ", count);
+  
+   for(i=0;i<count;i++)                          // Loop to get the elements stored in array
+      scanf("%d",&number[i]);
+ 
+   for(i=0;i<count;i++)                        // Logic of selection sort algorithm
+   {     
+      for(j=i+1;j<count;j++)
+      {
+         if(number[i]>number[j])              //if num1 is greater than num 2 then swap it logic 
+         {
+            temp=number[i];               
+            number[i]=number[j];
+            number[j]=temp;
+         }
+      }
+   }
+
+   printf("Sorted elements: ");
+   for(i=0;i<count;i++)
+      printf(" %d",number[i]);
+
+   return 0;
+}
